@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.products{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /*this is for content*/
+    align-items: center;
+    border: 5px ;
+    margin: auto; 
+    
+}
+.product{
+    flex-grow: 1;
+    
+    
+}
+
+/* Add this to your main CSS file for better description handling */
+.card-description {
+  /* Limits the text to 3 lines and adds "..." */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 72px; /* Adjust height based on your font-size and line-height. (e.g., 3 lines * 24px line-height) */
+  font-size: 16px; /* Reduced font-size for better fit */
+}
+
+/* NavBar.css */
+
+/* --- Main Navbar Container --- */
+.industrial-navbar {
+  background-color: #212529 !important; /* Dark charcoal background */
+  border-bottom: 3px solid #ffc107; /* Strong amber accent border */
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Brand/Logo Styling --- */
+.industrial-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease-in-out;
+}
+
+.industrial-navbar .navbar-brand:hover {
+  color: #ffc107 !important; /* Accent color on hover */
+}
+
+/* --- Navigation Links Styling --- */
+.industrial-navbar .nav-link {
+  color: #adb5bd !important; /* Light gray for inactive links */
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Underline effect on hover/focus */
+.industrial-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.industrial-navbar .nav-link:hover,
+.industrial-navbar .nav-link:focus {
+  color: #ffffff !important; /* White for active/hovered links */
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.industrial-navbar .nav-link:hover::after {
+  width: 80%;
+}
+
+
+/* --- Search Bar & Buttons Area --- */
+.industrial-navbar .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Custom styling for the search input */
+.industrial-navbar .search-input {
+  background-color: #343a40; /* Darker gray background */
+  border: 1px solid #495057;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.industrial-navbar .search-input::placeholder {
+  color: #adb5bd;
+}
+
+/* Focus effect for the search input */
+.industrial-navbar .search-input:focus {
+  background-color: #343a40;
+  color: #ffffff;
+  border-color: #ffc107; /* Accent color border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* Cart Icon Button - Using MUI Button as provided */
+.industrial-navbar .cart-button {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.industrial-navbar .cart-button:hover {
+  transform: scale(1.1);
+}
